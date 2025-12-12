@@ -14,19 +14,19 @@ Successfully implemented the required backend infrastructure:
 
 ### 1. Cloud Firestore Database
 This screenshot shows the created `SaubonLaundryEssentials` collection with the `SaubonLaundryEssentials_Logs` document containing the required fields.
-![Firestore Database Interface](firestore-data.png)
+![Firestore Database Interface](FirestoreDatabase.png)
 
 ### 2. Cloud Firestore Security Rules
 Security rules configured in test mode (`allow read, write: if true;`) for the development phase.
-![Firestore Security Rules](firestore-rules.png)
+![Firestore Security Rules](FirestoreRules.png)
 
 ### 3. Realtime Database
 The Realtime Database console showing the initialized database structure with Singapore location.
-![Realtime Database Console](realtimedb-data.png)
+![Realtime Database Console](RealtimeDatabaseData.png)
 
 ### 4. Realtime Database Security Rules
 Security rules for the Realtime Database, set with an expiration date (January 12, 2026) for development access.
-![Realtime Database Rules](realtimedb-rules.png)
+![Realtime Database Rules](RealtimeDatabaseRules.png)
 
 ## 🚀 Next Steps
 This setup provides a solid foundation. The next phase can involve:
