@@ -1,66 +1,40 @@
-# Firebase Project Setup: SaubonLaundryEssentials
+# SaubonLaundryEssentials: Firebase Backend Setup
 
-This repository contains the setup documentation for the **SaubonLaundryEssentials** Firebase project, demonstrating the configuration of both **Cloud Firestore** and **Realtime Database** with test mode security rules.
+## 📋 Project Overview
+This repository documents the complete Firebase backend configuration for the **SaubonLaundryEssentials** project. It showcases the setup of essential cloud services including Cloud Firestore and Realtime Database, following the project specifications for logging and data management as per the Week 10-17 module on Backend Services and APIs.
 
----
+## 🛠️ Implementation Details
+Successfully implemented the required backend infrastructure:
+*   **Cloud Firestore Database:** Configured with the dedicated collection `SaubonLaundryEssentials` containing the `SaubonLaundryEssentials_Logs` document.
+*   **Data Model:** Created document with fields for `Accuracy` (Number: 100), `ClassType` (String: "row class"), `Time` (String: "1:20 PM"), and `Date` (String: "Enero 17, 2025").
+*   **Realtime Database:** Established a separate Realtime Database instance in the Singapore (asia-southeast1) region.
+*   **Security Rules:** Configured appropriate security rules for both databases in test mode for development.
 
-## 📁 **Screenshots Documentation**
+## 📸 Setup Documentation
 
-### **1. Cloud Firestore Setup**
-| File | Description | Verification |
-|------|-------------|--------------|
-| `firestore-data.png` | Shows the `SaubonLaundryEssentials` collection containing the `SaubonLaundryEssentials_Logs` document with test data. | ✅ Document fields include: `Accuracy` (Number), `ClassType` (String), `Time` (String), `Date` (String) |
-| `firestore-rules.png` | Firestore security rules configured in **test mode** for development. | ✅ Rules are set to: `allow read, write: if true;` |
+### 1. Cloud Firestore Database
+This screenshot shows the created `SaubonLaundryEssentials` collection with the `SaubonLaundryEssentials_Logs` document containing the required fields.
+![Firestore Database Interface](firestore-data.png)
 
-### **2. Realtime Database Setup**
-| File | Description | Verification |
-|------|-------------|--------------|
-| `realtime-db-data.png` | Default empty view of the Realtime Database. | ✅ Database URL shows correct location: `asia-southeast1` |
-| `realtime-db-rules.png` | Realtime Database security rules with **auto-expiring test mode**. | ✅ Rules allow read/write until: `2026-01-12` (timestamp: 1768147200000) |
+### 2. Cloud Firestore Security Rules
+Security rules configured in test mode (`allow read, write: if true;`) for the development phase.
+![Firestore Security Rules](firestore-rules.png)
 
----
+### 3. Realtime Database
+The Realtime Database console showing the initialized database structure with Singapore location.
+![Realtime Database Console](realtimedb-data.png)
 
-## 🔧 **Technical Specifications**
+### 4. Realtime Database Security Rules
+Security rules for the Realtime Database, set with an expiration date (January 12, 2026) for development access.
+![Realtime Database Rules](realtimedb-rules.png)
 
-### **Firestore Configuration**
-- **Collection ID:** `SaubonLaundryEssentials`
-- **Document ID:** `SaubonLaundryEssentials_Logs`
-- **Document Fields:**
-  - `Accuracy`: 100 (Number)
-  - `ClassType`: "row class" (String)
-  - `Time`: "1:20 PM" (String) - Philippine time at setup
-  - `Date`: "Enero 17, 2025" (String) - Philippine date at setup
-
-### **Security Rules Status**
-| Database | Mode | Expiry | Status |
-|----------|------|--------|--------|
-| **Firestore** | Test Mode | None | ✅ Active |
-| **Realtime DB** | Test Mode | January 12, 2026 | ✅ Active |
+## 🚀 Next Steps
+This setup provides a solid foundation. The next phase can involve:
+*   Integrating this backend with a frontend application.
+*   Implementing proper authentication-based security rules for production.
+*   Expanding the data structure to manage laundry essentials inventory, orders, or customer data.
+*   Configuring Firebase Storage for product images.
 
 ---
 
-## 📍 **Project Details**
-- **Project Name:** SaubonLaundryEssentials
-- **Firebase Region:** Singapore (asia-southeast1)
-- **Setup Date:** January 17, 2025
-- **Setup Time:** Approximately 1:20 PM (PHT)
-
----
-
-## 🚀 **Next Steps for Production**
-1. Replace test mode security rules with proper authentication-based rules
-2. Implement proper data structure for laundry essentials inventory
-3. Set up Firebase Authentication for user management
-4. Configure Firebase Storage for product images
-
----
-
-## 📄 **Submission Compliance**
-✅ All 4 required screenshots are included  
-✅ Both databases are properly configured  
-✅ Security rules are in test mode as required  
-✅ Project naming follows specification: `LastName_ClassType` format  
-
----
-
-*This setup was completed as part of backend services and APIs coursework.*
+*This setup was completed as part of the Week 10-17 module: **Backend Services and APIs**.*
